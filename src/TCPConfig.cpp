@@ -121,7 +121,11 @@ void TCPInit_Task(void *pvParam)
 
             xTaskCreate(TCPServer_Task, String(Target->serverName + "_TCP_Server").c_str(), 4096, Target, 1, &(Target->Server_TaskHandle));              // 创建TCP服务器任务
             xTaskCreate(tcpRunTimeEnvTask, String(Target->serverName + "_RunEnv").c_str(), 4096, Target, 3, &(Target->RunTime_TaskHandle));          // 创建TCP运行环境任务
+<<<<<<< HEAD
             xTaskCreate(tcpRunTimeEnvTaskCrtl, String(Target->serverName + "_RunEnvCrtl").c_str(), 4096, Target, 1, &(Target->Terminal_TaskHandle)); // 创建TCP运行环境任务控制任务
+=======
+            xTaskCreate(tcpRunTimeEnvTaskCrtl, String(Target->serverName + "_RunEnvCrtl").c_str(), 4096, Target, 1, &(Target->Ctrl_TaskHandle)); // 创建TCP运行环境任务控制任务
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 
             if (showStateofRunningTask(Target->RunTime_TaskHandle, &(Target->TCP)))
             {

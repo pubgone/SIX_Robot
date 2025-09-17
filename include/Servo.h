@@ -9,7 +9,11 @@
 #include <FreeRTOSConfig.h>
 #include <TCPConfig.h>
 #include <mymath.h>
+<<<<<<< HEAD
 #include <BLE_Init.h>
+=======
+
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 /*********************Num of Servo*********************/
 #define G1H 1
 #define G1K 2
@@ -64,7 +68,11 @@
 #define defaultLeg1AnkleAngle 6.7 // 舵机原始角度
 
 #define defaultLeg2HipAngle -1.9  // 舵机原始角度
+<<<<<<< HEAD
 #define defaultLeg2KneeAngle 30.0  // 舵机原始角度
+=======
+#define defaultLeg2KneeAngle 7.5  // 舵机原始角度
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 #define defaultLeg2AnkleAngle 2.2 // 舵机原始角度
 
 #define defaultLeg3HipAngle 7.8     // 舵机原始角度
@@ -85,18 +93,25 @@
 #define defaultLeg6AnkleAngle -52.5 // 舵机原始角度
 
 #define defaultAngle 0
+<<<<<<< HEAD
 #define servoDefaultTime 40
+=======
+#define servoDefaultTime 100
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 
 #define defaultPower 500
 
 extern float vector_Stand[6][3];
 
 extern FSUS_SERVO_ANGLE_T defaultAngleArray[7][3];
+<<<<<<< HEAD
 extern bool Normal_flag;//平地步态标志位
 extern bool Climbing_flag;//爬坡步态标志位
 extern bool obstacle_flag;//越障标志位
 extern bool ControlExit_Flag;
 extern bool Mode_flag;
+=======
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 
 // extern uint16_t servoDefaultTime;
 class LegConfig
@@ -155,11 +170,18 @@ public:
 };
 extern u8_t AddedNumofLeg;
 extern QueueHandle_t LegQueue[numofLeg];
+<<<<<<< HEAD
 void Climbing();
 void Obstacle();
 void w_straight();
 void up_slope();
 void car();
+=======
+void w_straight();
+void up_slope();
+void car();
+void car2();
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 void stand();
 void UpSlope_task(void *pvParameters);
 void LegPowerDown_Task(void *pvParameters);
@@ -179,7 +201,10 @@ void Stand_Task(void *pvParameters);
 void car_Task(void *pvParameters);
 void car2_Task(void *pvParameters);
 void w_straight_walk_task(void *pvParameters);
+<<<<<<< HEAD
 
 void calculatePositin();
 void phase_turn();
+=======
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 #endif

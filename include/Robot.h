@@ -3,8 +3,11 @@
 
 #include <Arduino.h>
 #include <Servo.h>
+<<<<<<< HEAD
 // #include <main.h>
 // #include <BLE_Init.h>
+=======
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 #include <FashionStar_UartServo.h>
 #include <FashionStar_UartServoProtocol.h>
 
@@ -47,8 +50,11 @@ public:
 void RobotPos_Task(void *pvParameters);
 // void RobotPoscar_Task(void *pvParameters);
 void RobotChangePos_Task(void *pvParameters);
+<<<<<<< HEAD
 void RobotChangePosUp_Task(void *pvParameters);
 void RobotChangePosDown_Task(void *pvParameters);
 void RobotChangePosNormal_Task(void *pvParameters);
+=======
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 // void RobotPosStand_Task(void *pvParameters);
 #endif // _ROBOT_H_

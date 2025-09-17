@@ -17,6 +17,7 @@
         10, 3, 45, 69} // MUMU服务器IP
 #define JIAHONGServerIP \
     {                   \
+<<<<<<< HEAD
         192,168,31,29} // JIAHONG服务器IP
 
 #define ConisnServerIP \
@@ -26,6 +27,17 @@
 #define MUMUServerPort 2345         // MUMU服务器端口
 #define JIAHONGServerPort 2577      // JIAHONG服务器端口
 #define ConisnServerPort 1234      // JIAHONG服务器端口
+=======
+        192,168,51,248} // JIAHONG服务器IP
+
+#define ConisnServerIP \
+    {                   \
+        192,168,137,143} // JIAHONG服务器IP
+// 192,168,31,29
+#define MUMUServerPort 2345         // MUMU服务器端口
+#define JIAHONGServerPort 2577      // JIAHONG服务器端口
+#define ConisnServerPort 11411      // JIAHONG服务器端口
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 #define defaultServerPort 2566      // 默认服务器端口
 #define defaultServerName "Unknown" // 默认服务器名称
 #define FlushTime 1000              // 默认刷新时间
@@ -42,6 +54,11 @@ public:
     TaskHandle_t Server_TaskHandle = NULL;// TCP服务器任务
     TaskHandle_t RunTime_TaskHandle = NULL;// TCP运行时任务
     TaskHandle_t Terminal_TaskHandle = NULL;// TCP终端任务
+<<<<<<< HEAD
+=======
+    TaskHandle_t Ctrl_TaskHandle = NULL;// TCP控制任务
+    TaskHandle_t current_TaskHandle = NULL;
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
     // TaskHandle_t 
     TaskHandle_t TaskList[NumofTask];
     u_int16_t RunningNum_Task = 0;

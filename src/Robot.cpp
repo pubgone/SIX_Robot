@@ -117,12 +117,21 @@ void Robot::MoveBody(float x, float y, float z)
     Vector_Move[4] = Position(Vector_S.x - x, Vector_S.y - y, Vector_S.z - z);
     Vector_Move[5] = Position(Vector_S.x - x, Vector_S.y - y, Vector_S.z - z);
 
+<<<<<<< HEAD
     Leg[0].LegMoving(Vector_Move[0].x, Vector_Move[0].y, Vector_Move[0].z, 500);
     Leg[1].LegMoving(Vector_Move[1].x, Vector_Move[1].y, Vector_Move[1].z, 500);
     Leg[2].LegMoving(Vector_Move[2].x, Vector_Move[2].y, Vector_Move[2].z, 500);
     Leg[3].LegMoving(Vector_Move[3].x, Vector_Move[3].y, Vector_Move[3].z, 500);
     Leg[4].LegMoving(Vector_Move[4].x, Vector_Move[4].y, Vector_Move[4].z, 500);
     Leg[5].LegMoving(Vector_Move[5].x, Vector_Move[5].y, Vector_Move[5].z, 500);
+=======
+    Leg[0].LegMoving(Vector_Move[0].x, Vector_Move[0].y, Vector_Move[0].z, 2000);
+    Leg[1].LegMoving(Vector_Move[1].x, Vector_Move[1].y, Vector_Move[1].z, 2000);
+    Leg[2].LegMoving(Vector_Move[2].x, Vector_Move[2].y, Vector_Move[2].z, 2000);
+    Leg[3].LegMoving(Vector_Move[3].x, Vector_Move[3].y, Vector_Move[3].z, 2000);
+    Leg[4].LegMoving(Vector_Move[4].x, Vector_Move[4].y, Vector_Move[4].z, 2000);
+    Leg[5].LegMoving(Vector_Move[5].x, Vector_Move[5].y, Vector_Move[5].z, 2000);
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
 
     // 姿态变换后站立足起始端到足末端向量
     for (u8_t i = 0; i < 6; i++)
@@ -299,6 +308,7 @@ void RobotPos_Task(void *pvParameters)
 
 void RobotChangePos_Task(void *pvParameters)
 {
+<<<<<<< HEAD
     // delay(20);
     // robot.MoveBody(-30, 0, 0);
     // delay(20);
@@ -316,6 +326,8 @@ void RobotChangePos_Task(void *pvParameters)
     //     ControlExit_Flag = false;
     // }
     // vTaskDelete(NULL);
+=======
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
     while (true)
     {
         Position Change_Pos(0, 0, 0);
@@ -350,6 +362,7 @@ void RobotChangePos_Task(void *pvParameters)
 
     vTaskDelay(1);
 }
+<<<<<<< HEAD
 void RobotChangePosUp_Task(void *pvParameters)
 {
     Climbing_flag = true;
@@ -433,3 +446,5 @@ void RobotChangePosNormal_Task(void *pvParameters)
     }
     vTaskDelete(NULL);
 }
+=======
+>>>>>>> 0faa1efc23617dff3a3c3e1d4285a0a950e91692
